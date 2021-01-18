@@ -1,0 +1,529 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1/jquery-ui.min.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <!--Favicon-->
+    <link rel="icon"
+          type="image/png"
+          href="favicon.png" />
+    <script type="text/javascript" src="javascript.js"></script>
+    <!--<style type="text/css" src="style.css"></style>-->
+    <style>
+        body, h1, h2, h3, h4, h5, h6 {
+            font-family: "Raleway", sans-serif
+        }
+
+        body, html {
+            height: 100%;
+            line-height: 1.8;
+        }
+
+        /* Full height image header */
+        .bgimg-1 {
+            /*background-position: center;
+            background-size: cover;
+            background-image: url("PC-pic.jpg");
+            background-image: url("codeBack.jpg");
+            background-attachment: fixed;*/
+            min-height: 100%;
+        }
+
+        body {
+            background-position: center;
+            background-size: cover;
+            background-image: url("PC-pic.jpg");
+            /*background-image: url("codeBack.jpg");*/
+            background-attachment: fixed;
+            
+        }
+
+        .w3-bar .w3-button {
+            padding: 16px;
+        }
+
+        .w3-card {
+            background-color: #ffffff;
+        }
+
+        button {
+            padding: 0;
+            color: black;
+            text-decoration: none;
+            border: none;
+            background: none;
+        }
+
+        .back-opac {
+            padding: 5px;
+            background-color: black;
+            opacity: 0.7;
+        }
+
+            .back-opac > span {
+                color: white;
+                opacity: 1;
+            }
+
+        .card :hover {
+            color: #fff !important;
+            background-color: #616161 !important;
+        }
+    </style>
+    <title>Sean Golden</title>
+</head>
+
+
+<body>
+
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-card" id="myNavbar">
+            <!--<a href="#home" class="w3-bar-item w3-button w3-wide">LOGO</a>-->
+            <!-- Right-sided navbar links -->
+            <div class="w3-right w3-hide-small">
+                <a href="#home" class="w3-bar-item w3-button"><i class="fas fa-home"></i> HOME</a>
+                <a href="#maincontent" class="w3-bar-item w3-button"><i class="fa fa-user"></i> ABOUT ME</a>
+                <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+            </div>
+            <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Sidebar on small screens when clicking the menu icon -->
+    <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display: none" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+        <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">HOME</a>
+        <a href="#maincontent" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT ME</a>
+        <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+    </nav>
+
+    <!-- Header with full-height image -->
+    <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+        <div class="w3-display-left w3-text-white" style="padding: 48px">
+            <span class="w3-jumbo">Sean Golden</span><br />
+            <span class="w3-xxlarge w3-hide-small">So, you need a Developer...</span><br />
+
+            <span class="w3-xxlarge w3-hide-large w3-hide-medium">Everything about me</span><br />
+
+            <div class="back-opac">
+                <span>
+                    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Sligo, Ireland</p>
+                    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +353 838146908</p>
+                    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: Seangol1@hotmail.com</p>
+                </span>
+            </div>
+
+
+
+            <p><a href="#contact" id="btnContact" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Contact Me</a></p>
+        </div>
+        <div class="w3-display-bottomleft w3-text-grey w3-xxlarge" style="padding: 24px 48px">
+            <a target="_blank" href="https://www.facebook.com/sean.golden.7906"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+            <a target="_blank" href="https://github.com/s00154367"><i class="fa fa-github w3-hover-opacity"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/in/sean-golden-20a890115"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+        </div>
+    </header>
+    <div id="maincontent">
+        <!-- About Section --> 
+        <div class="w3-container w3-white" style="padding: 70px 16px;
+        align-content: center;
+        opacity:0.8;
+        text-align: center" id="about">
+            <div class="accordion" id="AboutMeAccordian" style="opacity:1;">
+                <div class="card" id="DescCard">
+                    <div class="card-header" id="Description">
+                        <h2 class="mb-0">
+                            <a data-toggle="collapse" data-target="#collapseDesc" aria-expanded="true" aria-controls="collapseDesc">
+                                <h3>About Me</h3>
+                            </a>
+                        </h2>
+                    </div>
+                </div>
+                <div id="collapseDesc" class="collapse" aria-labelledby="Description" data-parent="#AboutMeAccordian">
+                    <div class="card-body">
+                        
+
+                        <!-- Promo Section "Statistics"                WILL BE COMING BACK -->
+                        <!--<div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
+                            <div class="w3-quarter">
+                                <span class="w3-xxlarge">3+</span>
+                                <br />Years Customer Service Experience
+                            </div>
+                            <div class="w3-quarter">
+                                <span class="w3-xxlarge">3</span>
+                                <br />Years College Experience
+                            </div>
+                            <div class="w3-quarter">
+                                <span class="w3-xxlarge"></span>
+                                <br />
+                            </div>
+                            <div class="w3-quarter">
+                                <span class="w3-xxlarge">100%</span>
+                                <br />% of Projects Completed for Customers
+                            </div>
+                        </div>-->
+
+                        <!-- Modal for full size images on click-->
+                        <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+                            <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+                            <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+                                <img id="img01" class="w3-image" />
+                                <p id="caption" class="w3-opacity w3-large"></p>
+                            </div>
+                        </div>
+
+
+                        <!-- Skills Section -->
+                        <div class="w3-container w3-light-grey w3-padding-64">
+                            <div class="w3-row-padding">
+                                <p class="w3-large">
+                                    My name is <b>Sean Golden</b> and I'm a 24 year old Software Developer living in Sligo, Ireland.<br />
+                                    I've spend 3 years in college to get a BScs. in Software Development and have since been working in IT.<br />
+                                    I also enjoy music and learning new instruments. I play the Guitar, Ukulele and Piano.<br />
+                                    I also enjoy outdoor sports such as surfing, and tabletop Games with friends<br />
+
+
+                                </p><br /><br />
+                                <div class="w3-col m6">
+                                    <h3>My Skills.</h3>
+                                    <p>
+                                        I have developed various skills in communication from working in Customer Support for 3+ years.<br />
+                                        This includes simplifying issues and fixes and communicating them to end users or less tech savvy colleagues.
+                                        Also understanding issues and writing them up in as much detail as possible to unsure the testing process is effective.
+                                    </p>
+                                    <p>
+                                        Because I do not currently get much work in Development at my current job,
+                                        I get to work on some smaller projects that benefit or help my past-times such as Music apps or for Playing Dungeons and Dragons tabletop game.
+                                        I try and vary the tools I use for these so I can get some experience in different types of programming
+                                        including ASP.Net websites using Angular.js and API's and also using Python and C++ with the raspberry pi.
+                                    </p>
+                                </div>
+                                <div class="w3-col m6">
+                                    <p class="w3-wide"><i class="fas fa-comments w3-margin-right"></i>Communication</p>
+                                    <div class="w3-grey">
+                                        <div class="w3-container w3-dark-grey w3-center" style="        width: 90%">90%</div>
+                                    </div><br />
+                                    <p class="w3-wide"><i class="fas fa-tablet-alt w3-margin-right"></i>Team Work</p>
+                                    <div class="w3-grey">
+                                        <div class="w3-container w3-dark-grey w3-center" style="        width: 80%">80%</div>
+                                    </div><br />
+                                    <p class="w3-wide"><i class="fas fa-code w3-margin-right"></i>Determination</p>
+                                    <div class="w3-grey">
+                                        <div class="w3-container w3-dark-grey w3-center" style="        width: 100%">100%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <div class="card" id="TechCard" style="margin-top:30px;">
+                    <div class="card-header" id="Technologies">
+                        <h2 class="mb-0">
+                            <a data-toggle="collapse" data-target="#collapseTech" aria-expanded="true" aria-controls="collapseTech">
+                                <h3>Technologies</h3>
+                            </a>
+                        </h2>
+                    </div>
+                </div>
+                <div id="collapseTech" class="collapse" aria-labelledby="Technologies" data-parent="#AboutMeAccordian">
+                    <div class="card-body ">
+                        <div class="w3-container w3-light-grey w3-padding-64">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="w3-container">
+                                        <!--Design Graphs-->
+                                        <h3 class="w3-center">Design</h3>
+                                        <p class="w3-wide"><i class="fas fa-code w3-margin-right"></i>HTML</p>
+                                        <div class="w3-grey">
+                                            <div class="w3-container w3-dark-grey w3-center" style="width: 90%">90%</div>
+                                        </div><br />
+                                        <p class="w3-wide"><i class="fas fa-code w3-margin-right"></i>CSS</p>
+                                        <div class="w3-grey">
+                                            <div class="w3-container w3-dark-grey w3-center" style="width: 70%">70%</div>
+                                        </div><br />
+                                        <p class="w3-wide"><i class="fas fa-code w3-margin-right"></i>Javascript/JQuery</p>
+                                        <div class="w3-grey">
+                                            <div class="w3-container w3-dark-grey w3-center" style="width: 80%">80%</div>
+                                        </div><br />
+
+                                        <h4>Experienced also in <b>Bootstrap, Angular, Xaml </b>and <b>Photoshop</b></h4>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="container" style="padding-top:30px;">
+                                        <!--Design Description-->
+                                        <p>
+                                            I have a lot of experience creating websites in my spare time.<br />
+                                            I have use bootstrap in most websites and am confident in CSS to make whatever changes needed.<br />
+                                            I have experience in various JavaScript Frameworks including but not limited to JQuery, AngularJS, Bootstrap, 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="container" style="padding-top:80px;">
+                                        <!-- Functionality Description -->
+                                        <p>
+                                            I have experience using many different services including Visual Studio, SQL Server Management Studio, Azure Cloud Services, Andriod Studio's<br />
+                                            The technologies I've worked with include ASP.NET MVC, RESTful API, Ajax, Xamarin,
+                                        </p>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-6">
+                                    <div class="container">
+                                        <!-- Functionality Graphs -->
+                                        <h2>Functionality</h2>
+                                        <p class="w3-wide"><i class="fas fa-code w3-margin-right"></i>C#</p>
+                                        <div class="w3-grey">
+                                            <div class="w3-container w3-dark-grey w3-center" style="width: 90%">90%</div>
+                                        </div><br />
+                                        <p class="w3-wide"><i class="fas fa-code w3-margin-right"></i>SQL</p>
+                                        <div class="w3-grey">
+                                            <div class="w3-container w3-dark-grey w3-center" style="width: 70%">70%</div>
+                                        </div><br />
+                                        <p class="w3-wide"><i class="fas fa-code w3-margin-right"></i>Python</p>
+                                        <div class="w3-grey">
+                                            <div class="w3-container w3-dark-grey w3-center" style="width: 60%">60%</div>
+                                        </div><br />
+                                        <h4>Experienced also in <b>ASP.NET MVC, Windows Forms, C++, Ajax </b>and <b>WPF</b></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" id="ExpCard" style="margin-top:20px;">
+                    <div class="card-header" id="Experience">
+                        <h2 class="mb-0">
+                            <a class="" data-toggle="collapse" data-target="#collapseExp" aria-expanded="true" aria-controls="collapseExp">
+                                <h3>Experience</h3>
+                            </a>
+                        </h2>
+                    </div>
+                </div>
+                <div id="collapseExp" class="collapse" aria-labelledby="Experience" data-parent="#AboutMeAccordian">
+                    <div class="card-body">
+                        <div class="w3-container w3-light-grey w3-padding-64">
+                            <!-- Project Section -->
+                            <div class="w3-container" style="        padding: 20px 16px" id="">
+                                <h4><b>Top Part Motor Factors</b> (October 2012-April 2017)</h4>
+                                <p>
+                                    I started out working at Top Part Motor Factors part time for almost 6 years while going through school and college.<br />
+                                    Through this I learned the importance of usablity in programs as I was hands on with a CRM system each day.<br />
+                                    I found out how work flow and simple design functions can halp enhance usability.
+                                </p>
+                                <h4><b>ClanWilliam Health</b> (18th Apr 2017 – Current)</h4>
+                                <p>
+                                    Through work experience for college, I got a job in Customer Support in ClanWilliam Health and am still working here.<br />
+                                    Here I learned the importance of working in teams and the communication between all Depts.<br />
+                                    I got hands on experience in dealing with first line issue's, understanding the problem and informing the associated team.
+                                </p>
+                                <h4 class="w3-large">Other work</h4>
+                                <p>
+                                    During my spare time I get to work on some projects both for myself and for friends.<br />
+                                    Take a look at some of my previous projects:
+                                </p>
+
+                                <!-- Display Previous Projects  -->
+                                <div class="w3-row-padding w3-grayscale" style="        margin-top: 20px">
+                                    <div class="w3-col l3 m6">
+                                        <div class="w3-card">
+                                            <div class="w3-container">
+                                                <h3>NxtGen Technologies</h3>
+                                                <p class="w3-opacity">Advertisement Website</p>
+                                                <p>
+                                                    This was a project I did for a friend of mine who was getting his Tech Sales business mainly focused on selling items.
+                                                    The Idea of the website was to advertise his Social Media pages, where he did the bulk of the selling.
+                                                    The website came out really well, but unfortunatly was short lived as he set up a shop and decided to go with a sales website from Wix.
+                                                    I'm still glad I got the experience and got the chance to create my very first official website.
+                                                    This site just used Html, CSS and JavaScript.
+                                                </p>
+
+                                                <p><button onclick="window.open ('https://github.com/s00154367/NxTGenTechnologies','_blank')" class="w3-button w3-light-grey w3-block"><i class="fa fa-github"></i>  View on GitHub</button></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w3-col l3 m6">
+                                        <div class="w3-card">
+                                            <!--<img src="/w3images/team4.jpg" alt="Dan" style="width: 100%" />-->
+                                            <div class="w3-container">
+                                                <h3>The Tower</h3>
+                                                <p class="w3-opacity">D&amp;D Website</p>
+                                                <p>
+                                                    This is a project i worked on through Quarentine to help up Randomize all the items in a Dungeons and Dragons Tabletop Game.
+                                                    The website helps choose a number of elements based on dice rolls, it also shows what levels have been played already with the ability to Save and load sessions.
+                                                </p>
+                                                <p><button onclick="window.open ('https://github.com/s00154367/TheTower','_blank')" class="w3-button w3-light-grey w3-block"><i class="fa fa-github"></i>  View on GitHub</button></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w3-col l3 m6">
+                                        <div class="w3-card">
+                                            <div class="w3-container">
+                                                <h3>Locate Your Mate</h3>
+                                                <p class="w3-opacity">GPS Location Website</p>
+                                                <p>
+                                                    This was a project I did for my end of third year in College. The idea is that in a crowded area, like a festival, you can spot your group of friends locations on a map.
+                                                    I wanted the page to be simple, Create a session, Join the session and view the Map.
+                                                    I enjoyed working on this project because it's something I have actually thought about using myself countless times.
+                                                </p>
+                                                <p><button onclick="window.open ('https://github.com/s00154367/LocateYourMate','_blank')" class="w3-button w3-light-grey w3-block"><i class="fa fa-github"></i>  View on GitHub</button></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--<div class="w3-col l3 m6 ">
+                <div class="w3-card">
+                    <div class="w3-container">
+                        <h3>Character Trait Generator</h3>
+                        <p class="w3-opacity">D&amp;D Trait Gen</p>
+                        <p>
+                            This was a small project in WPF I created just for fun to enhance character creation in the Table Top Game, Dungeons and Dragons.<br />
+                            It just simply generates a 3 Random negative quirkes and a Phobia to enhance the Character story and the overall role playing.<br />
+                            The app is just built in a WPF app written in C# but myself and friends get to use it quite frequently when playing.
+                        </p>
+                        <p><button onclick="window.open ('https://github.com/s00154367/Character-Trait-Generator','_blank')" class="w3-button w3-light-grey w3-block"><i class="fa fa-github"></i>  View on GitHub</button></p>
+                    </div>
+                </div>
+            </div>-->
+                                    <div class="w3-col l3 m6 ">
+                                        <div class="w3-card">
+                                            <div class="w3-container">
+                                                <h3>RC Car</h3>
+                                                <p class="w3-opacity">RC Car Powered by Raspberry Pi</p>
+                                                <p>
+                                                    This is a project where we took apart an old RC Car and rewired the motors into a Raspberry Pi.<br />
+                                                    Using one motor to power the back wheels and one for the front steering, we were able to code a program in python to move the in all directions and drive as normal.<br />
+                                                    We were also able to code it so that we could use a wireless mini keyboard to control the car.<br />
+                                                    We got to experiment with some sensers and gadgets for the Raspberry Pi during the project which was also fun.
+                                                </p>
+                                                <p><button onclick="window.open ('https://github.com/s00154367/Character-Trait-Generator','_blank')" class="w3-button w3-light-grey w3-block"><i class="fa fa-github"></i>  View on GitHub</button></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="container" style="padding: 40px 10px">
+        <div class="w3-container w3-light-grey" style="padding: 50px 30px" id="contact">
+            <h3 class="w3-center">CONTACT</h3>
+            <p class="w3-center w3-large">Lets get in touch. Send me a message:</p>
+            <div class="container">
+                <div style="margin-top: 48px">
+                    <p><input class="w3-input w3-border" type="text" placeholder="Name" name="Name" id="txtName" /></p>
+                    <p><input class="w3-input w3-border" type="text" placeholder="Email" name="Email" id="txtEmail" /></p>
+                    <p><input class="w3-input w3-border" type="text" placeholder="Subject" name="Subject" id="txtSubject" /></p>
+                    <p><input class="w3-input w3-border" type="text" placeholder="Message" name="Message" id="txtMessage" /></p>
+                    <p>
+                        <button class="w3-button w3-black" id="btnSend" onclick="sendEmail()">
+                            <i class="fa fa-paper-plane"></i> SEND MESSAGE
+                        </button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-64">
+        <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+        <div class="w3-xlarge w3-section">
+            <a target="_blank" href="https://www.facebook.com/sean.golden.7906"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+            <a target="_blank" href="https://github.com/s00154367"><i class="fa fa-github w3-hover-opacity"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/in/sean-golden-20a890115"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+
+
+        // Toggle between showing and hiding the sidebar when clicking the menu icon
+        var mySidebar = document.getElementById("mySidebar");
+
+        function w3_open() {
+            if (mySidebar.style.display === 'block') {
+                mySidebar.style.display = 'none';
+            } else {
+                mySidebar.style.display = 'block';
+            }
+        }
+
+        // Close the sidebar with the close button
+        function w3_close() {
+            mySidebar.style.display = "none";
+        }
+
+        //Send Email Function
+        function sendEmail() {
+
+            var email = '';
+            var name = document.getElementById("txtName").value;
+            email = document.getElementById("txtEmail").value;
+            var subject = document.getElementById("txtSubject").value;
+            var message = document.getElementById("txtMessage").value;
+            if (email == '') {
+                alert("Please fill out details before sending!");
+            }
+            else {
+                Email.send({
+                    Host: "smtp.gmail.com",
+                    Username: "seangoltacc@gmail.com",
+                    Password: "R@spberry",
+                    To: 'seangol1@hotmail.com',
+                    From: "seangoltacc@gmail.com",
+                    Subject: 'CV WEB:' + subject,
+                    Body: name + '| ' + email + '| ' + message,
+                })
+                    .then(function (message) {
+                        alert("mail sent successfully")
+                    });
+            }
+        }
+
+    </script>
+
+
+</body>
+
+</html>
